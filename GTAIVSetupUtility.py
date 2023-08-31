@@ -375,11 +375,10 @@ class DXVKInstaller(QtWidgets.QWidget):
         logging.info("User's done with setting up. Linkng them to the guide...")
         msgBox = QtWidgets.QMessageBox()
         msgBox.setText("Automatic stage is complete. After pressing 'OK', you'll be redirected to my web guide to setting up GTA IV - set up the optimal game settings following that page.")
-        yesbtn = msgBox.addButton("OK", QtWidgets.QMessageBox.AcceptRole)
+        msgBox.addButton("OK", QtWidgets.QMessageBox.AcceptRole)
         msgBox.exec()
-        if msgBox.clickedButton() == yesbtn:
-            webbrowser.open('https://gillian-guide.github.io/additional-setup/#optimal-game-settings')
-            sys.exit()
+        webbrowser.open('https://gillian-guide.github.io/additional-setup/#optimal-game-settings')
+        sys.exit()
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
 
