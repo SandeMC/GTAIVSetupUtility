@@ -339,7 +339,7 @@ class DXVKInstaller(QtWidgets.QWidget):
                     if inputbox < 128:
                         QtWidgets.QMessageBox.critical(None,'Error',"Please enter a valid amount.", QtWidgets.QMessageBox.Retry)
                     else:
-                        commandline.append('-availablevidmem ' + vram)
+                        commandline.append('-availablevidmem ' + str(inputbox))
                         break
         else:
             logging.info("User didn't install DXVK - specifying VRAM is not needed.")
