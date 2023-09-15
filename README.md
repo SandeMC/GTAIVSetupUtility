@@ -7,5 +7,5 @@ This is a basic Python script, but some people might want to build the .exe out 
 ```py
 pip install -r requirements.txt
 pip install nuitka
-nuitka GTAIVSetupUtility.py --onefile --include-plugin=pyside6
+nuitka GTAIVSetupUtility.py --onefile --enable-plugin=pyside6
 ```
