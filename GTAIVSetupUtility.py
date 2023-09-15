@@ -210,7 +210,7 @@ class DXVKInstaller(QtWidgets.QWidget):
                                 installdxvk=2
 
         msgBox = QtWidgets.QMessageBox()
-        msgBox.setText("Do you want to use an async fork? It will provide better performance for most, but under some conditions it may provide worse performance instead. Without async, you might stutter the first time you see different areas. It won't stutter the next time in the same area.")
+        msgBox.setText("Do you want to use an async fork? It will provide better performance for most, but under some conditions it may provide worse performance instead. Without async, you might stutter the first time you see different areas. It won't stutter the next time in the same area.\n\nNote, however, that performance on NVIDIA when using DXVK 2.0+ may be worse. Feel free to experiment by re-opening this app.")
         installasync = msgBox.addButton("Yes", QtWidgets.QMessageBox.YesRole)
         noButton = msgBox.addButton("No", QtWidgets.QMessageBox.NoRole)
         msgBox.exec()
@@ -335,7 +335,7 @@ class DXVKInstaller(QtWidgets.QWidget):
             except:
                 logging.info("No NVIDIA GPU detected - asking the user to input VRAM on their own.")
                 while True:
-                    inputbox, ok = QtWidgets.QInputDialog().getInt(self, "VRAM Setup", "We can't query your VRAM amount automatically - check it yourself by typing dxdiag in start menu, press Enter, go through 'Display' tabs and type the biggest 'Approx. Total Memory' value you find. Type it in this box:")
+                    inputbox, ok = QtWidgets.QInputDialog().getInt(self, "VRAM Setup", "We can't query your VRAM amount automatically - check it yourself by typing dxdiag in start menu, press Enter, go through 'Display' tabs and find the lartgest 'Approx. Total Memory' value you find.\n\nType it in this box:")
                     if inputbox < 128:
                         QtWidgets.QMessageBox.critical(None,'Error',"Please enter a valid amount.", QtWidgets.QMessageBox.Retry)
                     else:
