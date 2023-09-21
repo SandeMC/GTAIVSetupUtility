@@ -1,4 +1,5 @@
-# Gillian's GTA IV Setup Utility
+# This tool is deprecated. Use the [WPF rewrite](https://github.com/SandeMC/GTAIVSetupUtilityWPF) instead.
+## Gillian's GTA IV Setup Utility
 Semi-automatically installs DXVK and launch options for your GTA IV installation. It automatically checks your hardware and what options to use, aswell as accounting for installed mods.
 
 ## Building
